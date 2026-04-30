@@ -1,0 +1,101 @@
+# PBI Static Integration Check
+
+## Functions retained
+- functions/_lib/auth.js
+- functions/_lib/crypto.js
+- functions/_lib/email.js
+- functions/_lib/json.js
+- functions/_lib/session.js
+- functions/_lib/turnstile.js
+- functions/api/_lib/http.js
+- functions/api/_lib/openai.js
+- functions/api/_lib/schemas.js
+- functions/api/_lib/seo.js
+- functions/api/admin/_shared.js
+- functions/api/admin/actions.js
+- functions/api/admin/message.js
+- functions/api/admin/overview.js
+- functions/api/admin/project.js
+- functions/api/admin/publish.js
+- functions/api/agent/chat.js
+- functions/api/agent/generate-website.js
+- functions/api/agent/improve-section.js
+- functions/api/agent/seo-plan.js
+- functions/api/ai/rewrite-site.js
+- functions/api/assisted-setup/request.js
+- functions/api/auth/create.js
+- functions/api/auth/login.js
+- functions/api/auth/logout.js
+- functions/api/auth/me.js
+- functions/api/auth/signup.js
+- functions/api/billing/create-checkout.js
+- functions/api/billing/webhook.js
+- functions/api/custom-build/enquiry.js
+- functions/api/domain/check.js
+- functions/api/domain/onboard.js
+- functions/api/domain/renewal-reminder.js
+- functions/api/enquiries/custom-build.js
+- functions/api/geo/currency.js
+- functions/api/leads/launch-checklist.js
+- functions/api/projects/_shared.js
+- functions/api/projects/create.js
+- functions/api/projects/delete.js
+- functions/api/projects/get-draft.js
+- functions/api/projects/get.js
+- functions/api/projects/list.js
+- functions/api/projects/publish.js
+- functions/api/projects/rename.js
+- functions/api/projects/save-draft.js
+- functions/api/projects/update.js
+- functions/api/seo/dashboard.js
+- functions/api/seo/fix-issue.js
+- functions/api/seo/keywords.js
+- functions/api/seo/scan.js
+- functions/api/seo/suggest.js
+- functions/api/seo/suggestion-action.js
+- functions/scheduled.js
+- functions/site/[slug]/index.js
+
+## Key page files
+- index.html: OK
+- dashboard/index.html: OK
+- builder/index.html: OK
+- examples/index.html: OK
+- seo-agent/index.html: OK
+- custom-build/index.html: OK
+- admin/index.html: OK
+- how-it-works/index.html: OK
+- login/index.html: OK
+- signup/index.html: OK
+- payment/index.html: OK
+
+## Required ID checks
+- dashboard/index.html #projectList: OK
+- dashboard/index.html #newProjectBtn: OK
+- dashboard/index.html #logoutBtn: OK
+- dashboard/index.html #userEmail: OK
+- dashboard/index.html #dashboardMessage: OK
+- builder/index.html #saveBtn: OK
+- builder/index.html #backBtn: OK
+- builder/index.html #logoutBtn: OK
+- builder/index.html #projectName: OK
+- builder/index.html #businessName: OK
+- builder/index.html #previewScroll: OK
+- builder/index.html #previewFrame: OK
+- builder/index.html #pageTabs: OK
+- builder/index.html #domainResult: OK
+- seo-agent/index.html #runScanBtn: OK
+- seo-agent/index.html #score: OK
+- seo-agent/index.html #pagesTable: OK
+- seo-agent/index.html #issuesList: OK
+- seo-agent/index.html #suggestionsList: OK
+- seo-agent/index.html #keywordsList: OK
+- seo-agent/index.html #addKeywordBtn: OK
+- custom-build/index.html #customBuildForm: OK
+- custom-build/index.html #customBuildSubmitBtn: OK
+- admin/index.html #adminRefreshBtn: OK
+- admin/index.html #adminStats: OK
+- admin/index.html #adminCreateProjectForm: OK
+- admin/index.html #adminSearch: OK
+- admin/index.html #adminList: OK
+- admin/index.html #adminDetail: OK

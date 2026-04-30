@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login • PBI</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand brand-logo-only" href="/">
+        <img src="/assets/PBI%20Logo.png" alt="Purbeck Business Solutions logo" class="header-logo">
+      </a>
+
+      <div class="row">
+        <a class="btn-ghost" href="/">Home</a>
+        <a class="btn" href="/signup/">Create account</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container section">
+    <div class="auth-card card">
+      <h1 class="section-title">Login</h1>
+      <p class="muted">Access your saved website projects.</p>
+
+      <form id="loginForm" method="post" action="javascript:void(0)">
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" class="input" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" class="input" type="password" autocomplete="current-password" required>
+        </div>
+
+        <div class="field">
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAADBNXYq5lI5pxBLq"
+            data-theme="light">
+          </div>
+        </div>
+
+        <button id="loginBtn" class="btn" type="submit">Login</button>
+      </form>
+
+      <div id="message" class="notice" style="margin-top:18px;display:none"></div>
+
+      <p class="muted" style="margin-top:22px">
+        No account yet?
+        <a href="/signup/">Create one here</a>.
+      </p>
+    </div>
+  </main>
+
+  <script src="/assets/login.js"></script>
+</body>
+</html>

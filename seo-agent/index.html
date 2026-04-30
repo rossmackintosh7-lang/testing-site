@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PBI SEO Agent • Purbeck Business Innovations</title><meta name="description" content="Monitor PBI page health, SEO issues, keyword targets and AI-generated SEO suggestions with the PBI SEO Agent."><link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/css/pbi-seo-agent.css"></head>
+<body class="pbi-app-page pbi-seo-page">
+<div class="pbi-app-shell">
+  <aside class="pbi-side">
+    <a class="pbi-side-brand" href="/"><img src="/assets/PBI%20Logo.png" alt="PBI logo"></a>
+    <nav class="pbi-side-nav" aria-label="Dashboard navigation">
+      <a class="pbi-side-link" href="/dashboard/"><span>⌂</span><strong>Dashboard</strong></a><a class="pbi-side-link" href="/dashboard/"><span>□</span><strong>Projects</strong></a><a class="pbi-side-link" href="/builder/"><span>✦</span><strong>AI Builder</strong></a><a class="pbi-side-link" href="/examples/"><span>▦</span><strong>Templates</strong></a><a class="pbi-side-link active" href="/seo-agent/"><span>◎</span><strong>SEO Agent</strong></a><a class="pbi-side-link" href="/custom-build/"><span>&lt;/&gt;</span><strong>Custom Builds</strong></a><a class="pbi-side-link" href="/admin/"><span>⚙</span><strong>Settings</strong></a>
+    </nav>
+    <div class="pbi-side-illustration"></div>
+    <a class="pbi-side-collapse" href="/">‹‹ Home</a>
+  </aside>
+  <div class="pbi-app-main">
+    <header class="pbi-app-topbar">
+      <div>
+        <h1>SEO Agent</h1>
+        <p>Scan your site, spot issues, and fix them in one place.</p>
+      </div>
+      <div class="pbi-app-actions"><a class="btn-ghost" href="/dashboard/">Dashboard</a><button class="btn-ghost" id="saveTokenBtn" type="button">Save token</button><button class="btn" id="runScanBtn" type="button">Run Scan</button></div>
+    </header>
+    <main class="pbi-app-content">
+  <div class="pbi-hidden-token"><input class="input seo-token-input" id="adminToken" placeholder="Optional PBI_ADMIN_TOKEN"><div id="seoStatus" class="seo-status"></div></div>
+  <section class="pbi-seo-kpis seo-grid"><div class="card seo-stat pbi-score-card"><span class="muted">SEO score</span><strong id="score">0</strong></div><div class="card seo-stat"><span class="muted">Pages scanned</span><strong id="pagesScanned">0</strong></div><div class="card seo-stat"><span class="muted">Open issues</span><strong id="openIssues">0</strong></div><div class="card seo-stat"><span class="muted">High issues</span><strong id="highIssues">0</strong></div></section>
+  <section class="pbi-seo-layout"><div class="card"><h2>Open Issues</h2><p class="muted">Use Fix to create a targeted AI suggestion for that issue.</p><div id="issuesList"></div></div><div class="card"><h2>AI Suggestions</h2><div id="suggestionsList"></div></div><aside class="card pbi-seo-checklist"><h2>SEO Checklist</h2><p>✓ Crawling & indexing</p><p>✓ Meta tags</p><p>! Content quality</p><p>✓ Images</p><p>! Internal linking</p><p>✓ Mobile usability</p></aside></section>
+  <section class="pbi-seo-layout lower"><div class="card seo-card-scroll"><h2>Page SEO health</h2><table class="seo-table"><thead><tr><th>Page</th><th>Score</th><th>Words</th><th>Checked</th><th></th></tr></thead><tbody id="pagesTable"></tbody></table></div><div class="card"><h2>Keyword tracker</h2><p class="muted">Track PBI keyword clusters over time.</p><input class="input" id="keyword" placeholder="Keyword"><input class="input" id="targetUrl" placeholder="Target URL"><input class="input" id="intent" placeholder="Intent"><select class="input" id="priority"><option>medium</option><option>high</option><option>low</option></select><button class="btn-ghost" id="addKeywordBtn" type="button">Add keyword</button><table class="seo-table" style="margin-top:14px"><thead><tr><th>Keyword</th><th>Target</th><th>Intent</th><th>Priority</th></tr></thead><tbody id="keywordsList"></tbody></table></div></section>
+    </main>
+  </div>
+</div>
+<script src="/assets/js/pbi-seo-agent.js" defer></script>
+
+</body></html>

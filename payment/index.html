@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Publish Website • PBI</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand brand-logo-only" href="/"><img src="/assets/PBI%20Logo.png" alt="PBI logo" class="header-logo"></a><div class="row"><a class="btn-ghost" href="/dashboard/">Dashboard</a><a class="btn-ghost" href="/login/">Login</a></div></div></nav>
+  <main class="container section">
+    <div class="payment-hero"><p class="eyebrow">Publish your website</p><h1 class="section-title">Choose how your website goes live</h1><p class="hero-text">Build for free. When you are ready, choose a publishing plan and domain option. Assisted setup and custom build deposits now live in your dashboard.</p></div>
+    <div class="notice domain-info" data-currency-notice style="margin-bottom:20px">Prices shown in GBP.</div>
+    <div id="paymentMessage" class="notice" style="display:none;margin-bottom:20px"></div>
+    <section class="domain-option-panel card"><h3>Domain options</h3><div class="domain-option-grid"><label class="domain-option-card"><input type="radio" name="domainOption" value="pbi_subdomain" checked><span><strong>PBI subdomain</strong><small>Fastest launch. Your site goes live on a PBI web address.</small></span></label><label class="domain-option-card"><input type="radio" name="domainOption" value="connect_existing"><span><strong>Connect your own domain</strong><small>Best if you already own a domain. PBI gives you the DNS steps.</small></span></label><label class="domain-option-card"><input type="radio" name="domainOption" value="register_new"><span><strong>Register a new domain</strong><small>Best if you do not have a domain yet. First-year registration is charged at checkout, with ongoing domain management billed yearly.</small></span></label></div><div id="selectedDomainSummary" class="domain-purchase-summary" style="display:none"></div></section>
+    <section class="pricing-grid">
+      <article class="pricing-card card" data-plan="starter"><p class="template-label">Starter Launch</p><h2><span data-gbp="12.99" data-price-suffix="/month">£12.99/month</span></h2><p class="muted">For a simple local business website launched on a PBI subdomain.</p><ul><li>Publish live website</li><li>PBI subdomain</li><li>Hosting and SSL</li><li>Basic support</li></ul><button class="btn planBtn" type="button" data-plan="starter">Choose Starter</button></article>
+      <article class="pricing-card card featured" data-plan="business"><p class="template-label">Business Launch</p><h2><span data-gbp="24.99" data-price-suffix="/month">£24.99/month</span></h2><p class="muted">For most businesses. Publish on a PBI subdomain or connect your own domain.</p><ul><li>Everything in Starter</li><li>Connect existing domain</li><li>More pages and images</li><li>Launch guidance</li></ul><button class="btn planBtn" type="button" data-plan="business">Choose Business</button></article>
+      <article class="pricing-card card" data-plan="plus"><p class="template-label">Business Plus</p><h2><span data-gbp="39.99" data-price-suffix="/month">£39.99/month</span></h2><p class="muted">For businesses that want priority support and extra help with setup.</p><ul><li>Everything in Business</li><li>Priority support</li><li>Custom domain help</li><li>Extra update support</li></ul><button class="btn planBtn" type="button" data-plan="plus">Choose Plus</button></article>
+    </section>
+    <section class="card domain-note"><h3>Domain registration</h3><p class="muted">New domain registration is added to your first checkout payment after you select an available domain in the builder. The annual PBI domain management fee is linked to the same Stripe subscription as your website plan, so the dashboard can track the website subscription and domain fee together.</p></section>
+  </main>
+  <script src="/assets/currency.js"></script>
+  <script src="/assets/payment.js"></script>
+</body>
+</html>
