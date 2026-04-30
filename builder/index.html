@@ -1,0 +1,171 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Builder • PBI</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body class="pbi-app-page pbi-builder-page">
+<div class="pbi-app-shell">
+  <aside class="pbi-side">
+    <a class="pbi-side-brand" href="/"><img src="/assets/PBI%20Logo.png" alt="PBI logo"></a>
+    <nav class="pbi-side-nav" aria-label="Dashboard navigation">
+      <a class="pbi-side-link" href="/dashboard/"><span>⌂</span><strong>Dashboard</strong></a><a class="pbi-side-link" href="/dashboard/"><span>□</span><strong>Projects</strong></a><a class="pbi-side-link active" href="/builder/"><span>✦</span><strong>AI Builder</strong></a><a class="pbi-side-link" href="/examples/"><span>▦</span><strong>Templates</strong></a><a class="pbi-side-link" href="/seo-agent/"><span>◎</span><strong>SEO Agent</strong></a><a class="pbi-side-link" href="/custom-build/"><span>&lt;/&gt;</span><strong>Custom Builds</strong></a><a class="pbi-side-link" href="/admin/"><span>⚙</span><strong>Settings</strong></a>
+    </nav>
+    <div class="pbi-side-illustration"></div>
+    <a class="pbi-side-collapse" href="/">‹‹ Home</a>
+  </aside>
+  <div class="pbi-app-main">
+    <header class="pbi-app-topbar">
+      <div>
+        <h1>AI Builder</h1>
+        <p>Create a beautiful website for your Purbeck business in minutes.</p>
+      </div>
+      <div class="pbi-app-actions"><button class="btn-ghost" id="backBtn" type="button">Dashboard</button><button class="btn-ghost" id="logoutBtn" type="button">Logout</button><button class="btn" id="saveBtn" type="button">Save project</button></div>
+    </header>
+    <main class="pbi-app-content">
+  <section class="pbi-template-ribbon"><div><h3>Choose a template to get started</h3><p class="muted">Selected demos from Examples flow straight into this builder.</p></div><a class="pbi-ribbon-card" href="/examples/cafe/"><img src="/assets/demo-media/cafe-hero.svg" alt="Cafe template"><strong>Café / Restaurant</strong></a><a class="pbi-ribbon-card" href="/examples/trades/"><img src="/assets/demo-media/trades-hero.svg" alt="Trades template"><strong>Tradesperson</strong></a><a class="pbi-ribbon-card" href="/examples/consultant/"><img src="/assets/demo-media/consultant-hero.svg" alt="Consultant template"><strong>Consultant</strong></a></section>
+  
+    <section class="builder-launch-guide card">
+      <div>
+        <p class="eyebrow">Publishing options</p>
+        <h3>Choose how your website will go live</h3>
+        <p class="muted">You can build your website first and decide how to publish it when you are ready.</p>
+      </div>
+      <div class="domain-option-grid compact">
+        <label class="domain-option-card">
+          <input type="radio" name="launchDomainOption" value="pbi_subdomain" checked>
+          <span><strong>PBI subdomain</strong><small>Fastest launch. Your site goes live on a PBI web address. No domain setup needed.</small></span>
+        </label>
+        <label class="domain-option-card">
+          <input type="radio" name="launchDomainOption" value="connect_existing">
+          <span><strong>Connect your own domain</strong><small>Best if you already own a domain such as yourbusiness.co.uk.</small></span>
+        </label>
+        <label class="domain-option-card">
+          <input type="radio" name="launchDomainOption" value="register_new">
+          <span><strong>Register a new domain</strong><small>Best if you need a new domain. Registration is charged separately.</small></span>
+        </label>
+      </div>
+      <div class="builder-pricing-line">
+        <span><strong>Starter:</strong> £12.99/month</span>
+        <span><strong>Business:</strong> £24.99/month</span>
+        <span><strong>Plus:</strong> £39.99/month</span>
+        <span><strong>Assisted setup:</strong> £99 one-off</span>
+        <span><strong>Domain registration:</strong> cost + £10/year</span>
+      </div>
+    </section>
+
+    <div id="builderSaveStatus" class="builder-save-status" aria-live="polite"></div>
+
+    <div id="builderTemplatePresetBanner" class="notice" style="display:none;margin-bottom:18px"></div>
+
+    <div class="builder-app">
+      <div class="builder-layout">
+        <section class="builder-left">
+          <div class="builder-stack">
+            <div class="card">
+              <h3>Project</h3>
+              <div class="field"><label for="projectName">Project name</label><input id="projectName" class="input" placeholder="My business website"></div>
+              <div class="field"><label for="businessName">Business name</label><input id="businessName" class="input" placeholder="Your Business"></div>
+              <div class="field"><label for="pageMainHeading">Page main heading</label><input id="pageMainHeading" class="input" placeholder="Your Business in your local area"></div>
+              <div class="field"><label for="subHeading">Sub heading</label><textarea id="subHeading" class="textarea" placeholder="Tell customers what you do in one clear paragraph."></textarea></div>
+            </div>
+
+            <div class="card">
+              <h3>Template style</h3>
+              <div class="template-choice-grid">
+                <label class="template-choice"><input type="radio" name="templateStyle" value="fashion" checked><span><strong>Fresh Retail</strong><small>Bright, bold and product-led.</small></span></label>
+                <label class="template-choice"><input type="radio" name="templateStyle" value="restaurant"><span><strong>Premium Dining</strong><small>Dark, refined and atmospheric.</small></span></label>
+                <label class="template-choice"><input type="radio" name="templateStyle" value="calm"><span><strong>Calm Craft</strong><small>Soft, editorial and image-led.</small></span></label>
+                <label class="template-choice"><input type="radio" name="templateStyle" value="tech"><span><strong>Future Event</strong><small>High-energy, dark neon and modern.</small></span></label>
+                <label class="template-choice"><input type="radio" name="templateStyle" value="studio"><span><strong>Minimal Studio</strong><small>Elegant, spacious and premium.</small></span></label>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Website colours</h3>
+              <div class="colour-grid">
+                <div class="field"><label for="accentColor">Accent colour</label><input id="accentColor" class="input" type="color" value="#c86f3d"></div>
+                <div class="field"><label for="backgroundColor">Background colour</label><input id="backgroundColor" class="input" type="color" value="#fff8f1"></div>
+                <div class="field"><label for="textColor">Text colour</label><input id="textColor" class="input" type="color" value="#2f1b12"></div>
+                <div class="field"><label for="navColor">Navigation colour</label><input id="navColor" class="input" type="color" value="#8a431d"></div>
+                <div class="field"><label for="buttonColor">Button colour</label><input id="buttonColor" class="input" type="color" value="#c86f3d"></div>
+                <div class="field"><label for="buttonTransparency">Button transparency</label><input id="buttonTransparency" class="range" type="range" min="0" max="80" value="0"><div id="buttonTransparencyNote" class="range-note">0% transparent</div></div>
+              </div>
+            </div>
+
+
+
+            <div class="card">
+              <h3>Preview button</h3>
+              <p class="small-note muted">Control what the main button says and what happens when customers select it.</p>
+              <div class="grid-2">
+                <div class="field"><label for="ctaButtonText">Button text</label><input id="ctaButtonText" class="input" placeholder="Get in touch"></div>
+                <div class="field"><label for="ctaButtonAction">Button action</label><select id="ctaButtonAction" class="select"><option value="contact">Scroll to contact section</option><option value="page">Go to another page</option><option value="external">Go to external website</option><option value="email">Open email</option><option value="phone">Open phone call</option><option value="none">No action</option></select></div>
+              </div>
+              <div class="grid-2">
+                <div class="field"><label for="ctaButtonPage">Page destination</label><select id="ctaButtonPage" class="select"><option value="contact">Contact</option><option value="services">Services</option><option value="about">About</option><option value="gallery">Gallery</option><option value="home">Home</option></select></div>
+                <div class="field"><label for="ctaButtonDestination">External URL, email or phone</label><input id="ctaButtonDestination" class="input" placeholder="https://example.co.uk or hello@example.co.uk"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Pages</h3>
+              <div class="combined-page-section">
+                <div>
+                  <h4 class="mini-heading">Choose pages</h4>
+                  <div class="page-choice-grid">
+                    <label class="page-choice"><input type="checkbox" class="pageToggle" value="home" checked disabled><span>Home</span></label>
+                    <label class="page-choice"><input type="checkbox" class="pageToggle" value="about" checked><span>About</span></label>
+                    <label class="page-choice"><input type="checkbox" class="pageToggle" value="services" checked><span>Services</span></label>
+                    <label class="page-choice"><input type="checkbox" class="pageToggle" value="gallery"><span>Gallery</span></label>
+                    <label class="page-choice"><input type="checkbox" class="pageToggle" value="contact" checked><span>Contact</span></label>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="mini-heading">Edit page</h4>
+                  <div id="pageTabs" class="page-tabs"></div>
+                  <div class="field" style="margin-top:16px"><label for="pageTitle">Page title</label><input id="pageTitle" class="input"></div>
+                  <div class="field"><label for="pageBody">Page content</label><textarea id="pageBody" class="textarea"></textarea></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Brand design</h3>
+              <div class="field"><label for="logoUpload">Upload logo</label><input id="logoUpload" class="input" type="file" accept="image/*"></div>
+              <div class="field"><label for="galleryUpload">Upload pictures</label><input id="galleryUpload" class="input" type="file" accept="image/*" multiple><p class="small-note muted">Uploaded pictures appear in the gallery preview.</p></div>
+              <div id="galleryThumbs" class="thumb-grid"></div>
+              <div class="field" style="margin-top:18px"><label for="backgroundUpload">Upload background image</label><input id="backgroundUpload" class="input" type="file" accept="image/*"></div>
+              <div class="field"><label for="backgroundTransparency">Background image transparency</label><input id="backgroundTransparency" class="range" type="range" min="0" max="20" value="20"><div id="backgroundTransparencyNote" class="range-note">20% transparent, maximum 20%</div></div>
+            </div>
+
+            <div class="card">
+              <h3>Domain</h3>
+              <div class="grid-2">
+                <div class="field"><label for="useCustomDomain">Use custom domain</label><select id="useCustomDomain" class="select"><option value="false">No</option><option value="true">Yes</option></select></div>
+                <div class="field"><label for="httpsEnabled">HTTPS</label><select id="httpsEnabled" class="select"><option value="true">On</option><option value="false">Off</option></select></div>
+              </div>
+              <div class="field"><label for="subdomainSlug">PBI subdomain slug</label><input id="subdomainSlug" class="input" placeholder="your-business"></div>
+              <div class="field"><label for="customDomain">Custom domain</label><input id="customDomain" class="input" placeholder="yourdomain.co.uk"></div>
+              <button class="btn-ghost" id="checkDomainBtn" type="button">Check availability and suggestions</button>
+              <div id="domainResult" class="notice" style="margin-top:16px">No domain check run yet.</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="builder-right">
+          <div class="preview-panel">
+            <div class="preview-top">
+              <div><div class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.16em">Live preview</div><div style="font-size:24px;font-weight:900;margin-top:4px">Website window</div></div>
+              <div class="toggle-group"><button id="desktopBtn" class="active" type="button">Desktop</button><button id="mobileBtn" type="button">Mobile</button></div>
+            </div>
+            <div id="previewFrame" class="browser">
+              <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><div id="previewAddress" class="address">https://your-business.pbi.dev</div></div>
+              <div id="previewScroll" class="preview-scroll"></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  
+    </main>
+  </div>
+</div>
+<script src="/assets/template-presets.js"></script><script src="/assets/builder.js"></script>
+
+</body></html>

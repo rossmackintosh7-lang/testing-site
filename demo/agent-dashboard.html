@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PBI Website Assistant Dashboard</title>
+  <link rel="stylesheet" href="/assets/css/pbi-ai-agent.css">
+</head>
+<body>
+  <header class="pbi-topbar">
+    <div class="pbi-topbar-inner">
+      <a class="pbi-brand" href="/"><div class="pbi-brand-mark">PBI</div><div><div>Website Assistant</div><div class="pbi-small">Live dashboard demo</div></div></a>
+      <a class="pbi-agent-button-secondary" href="/">Back to overview</a>
+    </div>
+  </header>
+
+  <main class="pbi-shell">
+    <section class="pbi-agent-shell">
+      <aside>
+        <section class="pbi-agent-panel">
+          <h1>PBI Website Assistant</h1>
+          <p>Answer a few questions and generate a full editable website draft.</p>
+          <input id="projectId" type="hidden"><input id="userId" type="hidden">
+          <label for="aiBusinessName">Business name</label><input id="aiBusinessName" placeholder="Example: Purbeck Dog Grooming">
+          <label for="aiBusinessDescription">What does the business do?</label><textarea id="aiBusinessDescription" placeholder="Tell us what the business offers"></textarea>
+          <label for="aiLocation">Where is the business based?</label><input id="aiLocation" placeholder="Example: Wareham, Dorset">
+          <label for="aiAudience">Who is it for?</label><textarea id="aiAudience" placeholder="Example: local dog owners, families, older customers, trades, hospitality businesses"></textarea>
+          <label for="aiTone">Website feel</label><select id="aiTone"><option value="friendly and local">Friendly and local</option><option value="professional and clean">Professional and clean</option><option value="bold and modern">Bold and modern</option><option value="premium and elegant">Premium and elegant</option><option value="simple and trustworthy">Simple and trustworthy</option></select>
+          <label for="aiGoal">Main goal</label><select id="aiGoal"><option value="get enquiries">Get enquiries</option><option value="get bookings">Get bookings</option><option value="sell products">Sell products</option><option value="showcase services">Showcase services</option><option value="promote a custom-built website">Promote a custom-built website</option></select>
+          <div class="pbi-button-row"><button class="pbi-agent-button" id="generateAiWebsiteBtn" type="button">Generate Website Draft</button><button class="pbi-agent-button-secondary" id="saveProjectBtn" type="button">Save Project</button></div>
+          <div id="aiStatus" aria-live="polite"></div><div id="saveStatus" class="pbi-status" aria-live="polite"></div>
+        </section>
+
+        <section class="pbi-agent-card" style="margin-top:18px"><h2>Load Project</h2><p>Paste a saved project ID to reload it.</p><label for="loadProjectId">Project ID</label><input id="loadProjectId" placeholder="project_..."><button class="pbi-agent-button-secondary" id="loadProjectBtn" type="button">Load Project</button><div id="loadStatus" class="pbi-status"></div></section>
+
+        <section class="pbi-agent-card" style="margin-top:18px"><h2>Primary Button Control</h2><label for="primaryButtonTextControl">Button text</label><input id="primaryButtonTextControl" placeholder="Request a quote"><label for="primaryButtonActionType">Button action</label><select id="primaryButtonActionType"><option value="enquiry_form">Show enquiry form</option><option value="booking_link">Open booking link</option><option value="phone_call">Call phone number</option><option value="email">Send email</option><option value="internal_page">Go to another page</option></select><label for="primaryButtonTarget">Button target</label><input id="primaryButtonTarget" placeholder="/enquiry, phone number, email, or link"><p id="primaryButtonActionExplanation"></p></section>
+
+        <section class="pbi-agent-card" style="margin-top:18px"><h2>SEO Assistant</h2><button class="pbi-agent-button-secondary" id="generateSeoPlanBtn" type="button">Generate SEO Plan</button><div id="seoStatus" class="pbi-status"></div><div id="seoPlanOutput"></div></section>
+
+        <section class="pbi-agent-card" style="margin-top:18px"><h2>Ask the Assistant</h2><div id="agentChatLog" class="pbi-agent-chat-log"></div><label for="agentChatInput">Question</label><textarea id="agentChatInput" placeholder="Ask how to improve this site..."></textarea><button class="pbi-agent-button-secondary" id="sendAgentChatBtn" type="button">Ask</button><ul id="agentSuggestedActions"></ul></section>
+      </aside>
+
+      <section class="pbi-preview-panel">
+        <div class="pbi-preview-hero"><h1 data-preview="hero-title">Your website title will appear here</h1><p data-preview="hero-subtitle">Your website intro will appear here.</p><div class="pbi-button-row"><button class="pbi-agent-button" data-preview="primary-button" type="button">Request a Quote</button><button class="pbi-agent-button-secondary" data-preview="secondary-button" type="button">View Services</button></div></div>
+        <section style="margin-top:24px"><button class="pbi-agent-button-secondary" data-improve-section="hero-title" data-target="[data-preview='hero-title']" type="button">Improve hero title</button> <button class="pbi-agent-button-secondary" data-improve-section="hero-subtitle" data-target="[data-preview='hero-subtitle']" type="button">Improve hero subtitle</button> <button class="pbi-agent-button-secondary" data-improve-section="about" data-target="[data-preview='about']" type="button">Improve about section</button></section>
+        <section style="margin-top:28px"><h2 data-preview="about-heading">About</h2><p data-preview="about">The about section will appear here.</p></section>
+        <section style="margin-top:28px"><h2>Trust points</h2><ul data-preview="trust-bullets"></ul></section>
+        <section style="margin-top:28px"><h2>Services</h2><div class="pbi-preview-services" data-preview="services"></div></section>
+        <section style="margin-top:28px"><h2>Suggested pages</h2><ul data-preview="pages"></ul></section>
+        <section style="margin-top:28px"><h2>Built-in SEO summary</h2><div class="pbi-agent-card" data-preview="seo-summary"></div></section>
+        <section style="margin-top:28px"><h2>FAQ</h2><div class="pbi-preview-faq" data-preview="faq"></div></section>
+
+        <section class="pbi-agent-card" style="margin-top:28px"><h2 data-preview="custom-build-heading">Want a custom built website?</h2><p data-preview="custom-build-text">Need something more tailored? PBI can build it for you.</p><button id="showCustomBuildFormBtn" class="pbi-agent-button" data-preview="custom-build-button" type="button">Enquire About a Custom Build</button></section>
+
+        <section id="customBuildEnquiryForm" class="pbi-agent-card" style="margin-top:18px" hidden><h2>Custom Build Enquiry</h2><label for="customName">Your name</label><input id="customName"><label for="customEmail">Email address</label><input id="customEmail" type="email"><label for="customBusiness">Business name</label><input id="customBusiness"><label for="customPhone">Phone</label><input id="customPhone"><label for="customBudget">Budget</label><select id="customBudget"><option value="">Select one</option><option value="under £500">Under £500</option><option value="£500 to £1,000">£500 to £1,000</option><option value="£1,000 to £2,500">£1,000 to £2,500</option><option value="£2,500 plus">£2,500 plus</option></select><label for="customTimeframe">Timeframe</label><input id="customTimeframe" placeholder="Example: within 2 weeks"><label for="customNeeds">What do you need?</label><textarea id="customNeeds"></textarea><button id="sendCustomBuildEnquiryBtn" class="pbi-agent-button" type="button">Send Enquiry</button><div id="customBuildStatus" class="pbi-status"></div></section>
+
+        <section class="pbi-agent-card" style="margin-top:28px"><h2 data-preview="assisted-setup-heading">Assisted setup</h2><p data-preview="assisted-setup-text">Get help finishing your site.</p><button class="pbi-agent-button-secondary" data-preview="assisted-setup-button" type="button">Add assisted setup</button><ul data-preview="assisted-setup-tasks"></ul></section>
+        <section style="margin-top:28px"><h2>Launch checklist</h2><div class="pbi-preview-checklist" data-preview="launch-checklist"></div></section>
+      </section>
+    </section>
+  </main>
+  <script src="/assets/js/pbi-ai-agent-live.js" defer></script>
+</body>
+</html>

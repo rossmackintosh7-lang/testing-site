@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard • PBI</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body class="pbi-app-page pbi-dashboard-page">
+<div class="pbi-app-shell">
+  <aside class="pbi-side">
+    <a class="pbi-side-brand" href="/"><img src="/assets/PBI%20Logo.png" alt="PBI logo"></a>
+    <nav class="pbi-side-nav" aria-label="Dashboard navigation">
+      <a class="pbi-side-link active" href="/dashboard/"><span>⌂</span><strong>Dashboard</strong></a><a class="pbi-side-link" href="/dashboard/"><span>□</span><strong>Projects</strong></a><a class="pbi-side-link" href="/builder/"><span>✦</span><strong>AI Builder</strong></a><a class="pbi-side-link" href="/examples/"><span>▦</span><strong>Templates</strong></a><a class="pbi-side-link" href="/seo-agent/"><span>◎</span><strong>SEO Agent</strong></a><a class="pbi-side-link" href="/custom-build/"><span>&lt;/&gt;</span><strong>Custom Builds</strong></a><a class="pbi-side-link" href="/admin/"><span>⚙</span><strong>Settings</strong></a>
+    </nav>
+    <div class="pbi-side-illustration"></div>
+    <a class="pbi-side-collapse" href="/">‹‹ Home</a>
+  </aside>
+  <div class="pbi-app-main">
+    <header class="pbi-app-topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Manage your websites, activity and next steps in one place.</p>
+      </div>
+      <div class="pbi-app-actions"><span id="userEmail" class="muted"></span><button class="btn-ghost" id="logoutBtn" type="button">Logout</button><button class="btn" id="newProjectBtn" type="button">Create new project</button></div>
+    </header>
+    <main class="pbi-app-content">
+  <div id="dashboardMessage" class="notice" style="display:none;margin-bottom:20px"></div>
+  <section class="pbi-dash-kpis">
+    <article><span>▣</span><p>Active Projects</p><strong>Loaded live</strong></article>
+    <article><span>◎</span><p>Published Sites</p><strong>Project based</strong></article>
+    <article><span>➤</span><p>Next Best Step</p><strong>Keep building</strong></article>
+  </section>
+  <section class="pbi-dashboard-grid">
+    <div class="card pbi-project-panel"><div class="pbi-card-head"><div><h2>Recent Projects</h2><p class="muted">Your saved websites and launch actions.</p></div><a class="btn-ghost" href="/builder/">Open Builder</a></div><div id="projectList" class="project-list"><div class="notice">Loading your projects...</div></div></div>
+    <aside class="pbi-next-panel">
+      <div class="card"><h3>Next Best Steps</h3><a class="pbi-step-link" href="/examples/"><span>▦</span><b>Choose a template</b><small>Start from a full demo.</small></a><a class="pbi-step-link" href="/seo-agent/"><span>◎</span><b>Improve your SEO</b><small>Run checks and fix open issues.</small></a><a class="pbi-step-link" href="/custom-build/"><span>➤</span><b>Need help?</b><small>Request a custom build.</small></a></div>
+      <div class="card pbi-score-card"><div class="pbi-score-ring">82<span>/100</span></div><h3>Site Performance</h3><p class="muted">Use the SEO Agent to improve and track each website.</p><a class="btn-ghost" href="/seo-agent/">View SEO Agent</a></div>
+    </aside>
+  </section>
+    </main>
+  </div>
+</div>
+<script src="/assets/currency.js"></script><script src="/assets/dashboard.js"></script>
+
+</body></html>

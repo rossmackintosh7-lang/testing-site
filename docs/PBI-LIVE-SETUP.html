@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PBI Live Setup Notes</title><link rel="stylesheet" href="/assets/css/pbi-ai-agent.css"></head>
+<body>
+<header class="pbi-topbar"><div class="pbi-topbar-inner"><a class="pbi-brand" href="/"><div class="pbi-brand-mark">PBI</div><div><div>Setup Notes</div><div class="pbi-small">Cloudflare live version</div></div></a><a class="pbi-agent-button-secondary" href="/demo/agent-dashboard.html">Open Dashboard</a></div></header>
+<main class="pbi-shell"><section class="pbi-agent-card">
+<h1>PBI AI Agent Live Setup</h1>
+<p>This folder is designed to be deployed to Cloudflare Pages or merged into PBI 2.</p>
+<h2>Required Cloudflare variables</h2><pre><code>OPENAI_API_KEY
+OPENAI_MODEL = gpt-4.1-mini</code></pre>
+<h2>Required D1 binding</h2><pre><code>DB</code></pre>
+<h2>Run this D1 schema</h2><pre><code>database/pbi-ai-agent-live-schema.sql</code></pre>
+<h2>Optional email variables</h2><pre><code>RESEND_API_KEY
+CUSTOM_BUILD_NOTIFY_TO = info@purbeckbusinessinnovations.co.uk
+CUSTOM_BUILD_NOTIFY_FROM = PBI &lt;enquiry@purbeckbusinessinnovations.co.uk&gt;</code></pre>
+<h2>Test page</h2><pre><code>/demo/agent-dashboard.html</code></pre>
+</section></main></body></html>

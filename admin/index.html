@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PBI Admin Panel</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body class="pbi-app-page pbi-admin-page">
+<div class="pbi-app-shell">
+  <aside class="pbi-side">
+    <a class="pbi-side-brand" href="/"><img src="/assets/PBI%20Logo.png" alt="PBI logo"></a>
+    <nav class="pbi-side-nav" aria-label="Dashboard navigation">
+      <a class="pbi-side-link" href="/dashboard/"><span>⌂</span><strong>Dashboard</strong></a><a class="pbi-side-link" href="/dashboard/"><span>□</span><strong>Projects</strong></a><a class="pbi-side-link" href="/builder/"><span>✦</span><strong>AI Builder</strong></a><a class="pbi-side-link" href="/examples/"><span>▦</span><strong>Templates</strong></a><a class="pbi-side-link" href="/seo-agent/"><span>◎</span><strong>SEO Agent</strong></a><a class="pbi-side-link" href="/custom-build/"><span>&lt;/&gt;</span><strong>Custom Builds</strong></a><a class="pbi-side-link active" href="/admin/"><span>⚙</span><strong>Settings</strong></a>
+    </nav>
+    <div class="pbi-side-illustration"></div>
+    <a class="pbi-side-collapse" href="/">‹‹ Home</a>
+  </aside>
+  <div class="pbi-app-main">
+    <header class="pbi-app-topbar">
+      <div>
+        <h1>Admin panel</h1>
+        <p>Customers, projects, custom build enquiries and support in one place.</p>
+      </div>
+      <div class="pbi-app-actions"><a class="btn" href="/dashboard/">Dashboard</a><a class="btn-ghost" href="/seo-agent/">SEO Agent</a><button class="btn-ghost" id="adminRefreshBtn" type="button">Refresh</button></div>
+    </header>
+    <main class="pbi-app-content">
+  <div id="adminMessage" class="notice" style="display:none;margin-bottom:16px"></div>
+  <section class="pbi-dash-kpis admin-stats-grid" id="adminStats"><div class="card">Loading admin data...</div></section>
+  <section class="card pbi-admin-create">
+    <div><h3>Create project for existing customer</h3><p class="muted">Creates a new draft project in their dashboard.</p></div>
+    <form id="adminCreateProjectForm" class="admin-create-form"><input class="input" name="email" type="email" placeholder="Customer email"><input class="input" name="name" placeholder="Project name"><button class="btn-ghost" type="submit">Create project</button></form>
+  </section>
+  <section class="admin-layout pbi-admin-layout">
+    <aside class="card admin-sidebar"><div class="admin-search-wrap"><label class="label" for="adminSearch">Search</label><input class="input" id="adminSearch" placeholder="Customer, project, domain, email..."></div><div class="admin-tabs"><button class="active" data-admin-tab="projects" type="button">Projects</button><button data-admin-tab="enquiries" type="button">Custom enquiries</button><button data-admin-tab="support" type="button">Support</button><button data-admin-tab="users" type="button">Users</button></div><div id="adminList" class="admin-list"></div></aside>
+    <section class="card admin-detail" id="adminDetail"><h2>Select an item</h2><p class="muted">Choose a customer project, enquiry or support request from the left. You can open the builder in admin mode and edit the same content the customer sees.</p></section>
+  </section>
+    </main>
+  </div>
+</div>
+<script src="/assets/admin.js"></script>
+
+</body></html>
