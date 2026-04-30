@@ -1,0 +1,3 @@
+Turnstile site key has been inserted into signup and login pages.
+You still need to keep the Turnstile secret key only in Cloudflare environment variables.
+If you rotated the secret key, make sure TURNSTILE_SECRET_KEY in Pages is updated.

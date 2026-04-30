@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Create account • PBI</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand brand-logo-only" href="/"><img src="/assets/PBI%20Logo.png" alt="Purbeck Business Innovations logo" class="header-logo"></a>
+      <div class="row"><a class="btn-ghost" href="/login/">Login</a></div>
+    </div>
+  </nav>
+
+  <main class="auth-shell">
+    <div class="auth-card">
+      <p class="eyebrow">Start building</p>
+      <h2 class="section-title">Create your account</h2>
+      <p class="muted">Create your PBI dashboard, then build, save and publish your business website when you are ready.</p>
+      <div id="message" class="notice" style="display:none;margin:16px 0"></div>
+      <div id="templateNotice" class="notice" style="display:none;margin:16px 0"></div>
+
+      <form id="signupForm">
+        <div class="field"><label>Email address</label><input class="input" type="email" name="email" required></div>
+        <div class="field"><label>Password</label><input class="input" type="password" name="password" required minlength="8"></div>
+        <div class="field"><label>Website name</label><input class="input" type="text" name="project_name" placeholder="My business website"></div>
+        <input type="hidden" name="terms_version" value="2026-04-28">
+
+        <label class="terms-check">
+          <input type="checkbox" name="terms_accepted" required>
+          <span>I agree to the <a href="/terms/" target="_blank" rel="noopener">Terms and Conditions</a>. I understand PBI provides website tools, hosting and support services, but does not guarantee sales, enquiries, search rankings, third-party uptime or business results.</span>
+        </label>
+
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADBNXYq5lI5pxBLq"></div>
+
+        <div class="row" style="margin-top:16px">
+          <button class="btn" type="submit">Create account</button>
+          <a class="btn-ghost" href="/login/">Already have an account?</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="/assets/auth.js"></script>
+  <script>PBIAuth.attachSignup('signupForm', 'message');</script>
+  <script src="/assets/template-presets.js"></script>
+  <script src="/assets/template-signup.js"></script>
+</body>
+</html>
